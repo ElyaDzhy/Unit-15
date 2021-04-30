@@ -1,16 +1,21 @@
 .box {
-  display: inline-block;
-  height: 200px;
+  height: 100px;
   width: 200px;
-  background-color: rgb(133, 84, 57);
+  margin: 10px 0;
+  background-color: blue;
 
-  transition-property: width;
-  transition-duration: 1s;
-  transition-timing-function: linear;
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  color: aliceblue;
+
+  transition-property: all;
+  transition-duration: 6s;
+  /* transition-timing-function: ease-in; */
   /* transition-delay: 4s; */
 }
 
-.box:hover,
-.box:focus {
-  width: 400px;
+#parent:hover > .box {
+  width: 100vw;
+  background-color: red;
 }
