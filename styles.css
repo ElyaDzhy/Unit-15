@@ -24,16 +24,12 @@ li:hover {
   background-color: thistle;
 }
 
-li::before {
+li::before,
+li::after {
   content: "";
-  background-color: linear-gradient(rgb(83, 68, 83), thistle);
-  height: 2px;
+  height: 4px;
 
   position: absolute;
-
-  bottom: calc(100% + 2px);
-  left: 0;
-  width: 0;
 
   /* для всех числовых значений можно задать переходы */
 
@@ -41,6 +37,30 @@ li::before {
   transition-duration: 0.5s;
 }
 
-li:hover::before {
+li::before {
+  background-image: linear-gradient(
+    to right,
+    rgb(133, 72, 133),
+    thistle
+  );
+  bottom: calc(100% + 2px);
+  right: 0;
+  width: 0;
+}
+
+li::after {
+  background-image: linear-gradient(
+    to right,
+    rgb(241, 225, 225),
+    rgb(150, 15, 150)
+  );
+
+  bottom: calc(0% - 6px);
+  left: 0;
+  width: 0;
+}
+
+li:hover::before,
+li:hover::after {
   width: 100%;
 }
