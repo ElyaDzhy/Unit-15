@@ -1,0 +1,46 @@
+ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  white-space: nowrap;
+  /* text-wrap: none; */
+  word-wrap: break-word;
+}
+
+li {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 10px;
+  text-transform: uppercase;
+  background-color: whitesmoke;
+  font-family: sans-serif;
+  color: rgb(185, 181, 181);
+
+  position: relative;
+}
+
+li:hover {
+  cursor: pointer;
+  background-color: thistle;
+}
+
+li::before {
+  content: "";
+  background-color: linear-gradient(rgb(83, 68, 83), thistle);
+  height: 2px;
+
+  position: absolute;
+
+  bottom: calc(100% + 2px);
+  left: 0;
+  width: 0;
+
+  /* для всех числовых значений можно задать переходы */
+
+  transition-property: width;
+  transition-duration: 0.5s;
+}
+
+li:hover::before {
+  width: 100%;
+}
