@@ -1,33 +1,16 @@
-#pageHeader {
-  /* min-height: 50vh; */
-  margin-top: calc(100vh / 2 - 200px);
-  padding: 150px 20px;
-  text-align: center;
-  background-image: url("./../images/animal_squirrel_4k_5k_hd_animals_2-3840x2160.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+.box {
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  background-color: rgb(133, 84, 57);
 
-  color: rgb(255, 255, 255);
-
-  position: relative;
-  z-index: -1;
+  transition-property: width;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+  /* transition-delay: 4s; */
 }
 
-#pageHeader::before {
-  content: "";
-  position: absolute;
-
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.562);
-  z-index: -1;
-}
-h1 {
-  z-index: 0;
-}
-h1:hover {
-  cursor: pointer;
+.box:hover,
+.box:focus {
+  width: 400px;
 }
