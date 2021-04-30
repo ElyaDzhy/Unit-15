@@ -1,0 +1,26 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: bisque;
+}
+
+p {
+  margin: 0px 150px;
+  padding: 0px 20px;
+  height: 100vh;
+  background-color: white;
+}
+
+p::first-letter {
+  color: red;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+p::first-line {
+  background-color: rgba(0, 128, 0, 0.733);
+}
+
+p::selection {
+  background-color: rgba(255, 228, 196, 0.822);
+}
