@@ -1,66 +1,33 @@
-ul {
-  list-style: none;
-  padding: 0px;
-  margin: 0px;
-  white-space: nowrap;
-  /* text-wrap: none; */
-  word-wrap: break-word;
-}
+#pageHeader {
+  /* min-height: 50vh; */
+  margin-top: calc(100vh / 2 - 200px);
+  padding: 150px 20px;
+  text-align: center;
+  background-image: url("./../images/animal_squirrel_4k_5k_hd_animals_2-3840x2160.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 
-li {
-  display: inline-block;
-  box-sizing: border-box;
-  padding: 10px;
-  text-transform: uppercase;
-  background-color: whitesmoke;
-  font-family: sans-serif;
-  color: rgb(185, 181, 181);
+  color: rgb(255, 255, 255);
 
   position: relative;
+  z-index: -1;
 }
 
-li:hover {
-  cursor: pointer;
-  background-color: thistle;
-}
-
-li::before,
-li::after {
+#pageHeader::before {
   content: "";
-  height: 4px;
-
   position: absolute;
 
-  /* для всех числовых значений можно задать переходы */
-
-  transition-property: width;
-  transition-duration: 0.5s;
-}
-
-li::before {
-  background-image: linear-gradient(
-    to right,
-    rgb(133, 72, 133),
-    thistle
-  );
-  bottom: calc(100% + 2px);
+  top: 0;
   right: 0;
-  width: 0;
-}
-
-li::after {
-  background-image: linear-gradient(
-    to right,
-    rgb(241, 225, 225),
-    rgb(150, 15, 150)
-  );
-
-  bottom: calc(0% - 6px);
   left: 0;
-  width: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.562);
+  z-index: -1;
 }
-
-li:hover::before,
-li:hover::after {
-  width: 100%;
+h1 {
+  z-index: 0;
+}
+h1:hover {
+  cursor: pointer;
 }
